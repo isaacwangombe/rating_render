@@ -30,17 +30,17 @@
                             {{user}}</a>
                     </li>
                     <li class=" nav-item ">
-                        <a class=" btn active " href="/logout ">Logout</a>
+                        <a class=" btn active " href="/logout/ ">Logout</a>
                     </li>
                     <li class="nav-item ">
                         <a class=" btn active " href="{% url 'new_project'%} ">new Project</a>
                     </li>
                     {% else %}
                     <li class="nav-item ">
-                        <a class=" btn active " href="/accounts/login ">Login</a>
+                        <a class=" btn active " href="/accounts/login/ ">Login</a>
                     </li>
                     <li class="nav-item ">
-                        <a class='btn btn-default' href="/accounts/register ">Register</a> {% endif %}
+                        <a class='btn btn-default' href="/accounts/register/ ">Register</a> {% endif %}
                     </li>
 
                 </ul>
