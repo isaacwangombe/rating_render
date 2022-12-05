@@ -1,0 +1,29 @@
+{% load django_bootstrap5 %} {% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% if title %}
+    <title>Marigarated - {{title}}</title>
+    {% else %}
+    <title> Marigarated - {{title}}</title>
+    {% endif %} {% block styles %} {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"> {% endblock %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/flaticon.png' %}" />
+
+
+
+</head>
+
+<body>
+    {% include "navbar.html"%} {% block content%}{% block scripts %} 
+    <script type="text/javascript" src="{{ STATIC_URL }} js/home.js'"></script>
+    {% bootstrap_javascript %} {% endblock %}{% endblock %}
+
+
+</body>
+
+</html>
